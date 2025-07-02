@@ -1,6 +1,4 @@
-# Modern C++ Project Template
-
-> ⚡A clean starter for modern C++20 projects with CMake Presets, testing, benchmarking, sanitizers, coverage, and developer tooling.
+# C++ Sandbox
 
 [![CI](https://github.com/ramsafin/cpp-sandbox/actions/workflows/ci.yml/badge.svg)](https://github.com/ramsafin/cpp-sandbox/actions/workflows/ci.yml)
 [![Clang-Format](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-format.yml/badge.svg)](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-format.yml)
@@ -16,7 +14,6 @@
 - [Workflow Presets](#workflow-presets)
 - [Building and Testing](#building-and-testing)
 - [Sanitizers](#sanitizers)
-- [Benchmarking](#benchmarking)
 - [Coverage](#coverage)
 - [Developer Tooling](#developer-tooling)
   - [Code Formatting](#code-formatting)
@@ -32,7 +29,6 @@
 - **Modern C++20+**: fully enabled C++20 with support for upgrading to C++23
 - **CMake Presets**: reproducible, platform‑agnostic builds via `CMakePresets.json`
 - **Testing**: integrated with GoogleTest using `gtest_discover_tests()`
-- **Benchmarking**: optional benchmarks with Google Benchmark
 - **Sanitizers**: ASan and UBSan runtime checks
 - **Coverage**: `gcovr`-powered HTML reports
 - **Developer Tooling**:
@@ -46,8 +42,6 @@
 
 ```text
 cpp-sandbox/
-├── app/                 # Optional demo application
-├── benchmarks/          # Google Benchmark performance tests
 ├── cmake/               # Custom CMake modules (warnings, sanitizers, tooling)
 ├── include/             # Public headers
 ├── src/                 # Library source files
@@ -81,7 +75,6 @@ This project uses [**CMake Presets**](https://cmake.org/cmake/help/latest/manual
 | `RelWithDebInfo`    | Optimized build with debug symbols (**recommended**)   |
 | `Sanitize`          | Builds with runtime checks enabled (ASan/UBSan)        |
 | `Coverage`          | Builds instrumented for coverage reporting             |
-| `Release-Bench`     | Builds Release + benchmarks                            |
 
 List available presets:
 ```bash
@@ -131,14 +124,6 @@ or run the workflow:
 
 ```bash
 cmake --workflow --preset check-sanitize
-```
-
-## Benchmarking
-
-```bash
-cmake --preset gcc-Release-Bench
-cmake --build --preset gcc-Release-Bench --target benchmarks
-./build/gcc-Release-Bench/benchmarks/benchmarks
 ```
 
 ## Coverage

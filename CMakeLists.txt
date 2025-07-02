@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.23 FATAL_ERROR)
-project(cpp_sandbox LANGUAGES CXX VERSION 0.1.0)
+project(cpp_sandbox LANGUAGES CXX VERSION 1.0.0)
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
 # === Project Configuration ===
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
@@ -20,20 +20,10 @@ include(Helpers)
 # === Core Library ===
 add_subdirectory(src)
 
-# === App ===
-if(BUILD_APP)
-  add_subdirectory(app)
-endif()
-
 # === Unit Tests ===
 if(ENABLE_TESTING)
   enable_testing()
   add_subdirectory(tests)
-endif()
-
-# === Benchmarks ===
-if(ENABLE_BENCHMARKS)
-  add_subdirectory(benchmarks)
 endif()
 
 # === Developer Tooling (formatters, linters, etc.) ===

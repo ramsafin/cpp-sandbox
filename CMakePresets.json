@@ -16,8 +16,6 @@
         "ENABLE_STRICT_WARNINGS": "ON",
         "ENABLE_TESTING": "ON",
         "ENABLE_COVERAGE": "OFF",
-        "ENABLE_BENCHMARKS": "OFF",
-        "BUILD_APP": "OFF",
         "ENABLE_ASAN": "OFF",
         "ENABLE_UBSAN": "OFF",
         "ENABLE_SANITIZERS": "OFF",
@@ -91,16 +89,6 @@
       "description": "GCC build for coverage analysis"
     },
     {
-      "name": "gcc-Release-Bench",
-      "inherits": "conf-base-gcc",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "ENABLE_BENCHMARKS": "ON",
-        "ENABLE_TESTING": "OFF"
-      },
-      "description": "GCC Release build with benchmarks"
-    },
-    {
       "name": "clang-Debug",
       "inherits": "conf-base-clang",
       "cacheVariables": {
@@ -141,16 +129,6 @@
         "ENABLE_COVERAGE": "ON"
       },
       "description": "Clang build for coverage analysis"
-    },
-    {
-      "name": "clang-Release-Bench",
-      "inherits": "conf-base-clang",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Release",
-        "ENABLE_BENCHMARKS": "ON",
-        "ENABLE_TESTING": "OFF"
-      },
-      "description": "Clang Release build with benchmarks"
     }
   ],
   "buildPresets": [
@@ -193,12 +171,6 @@
       "description": "Build using gcc-Coverage configuration"
     },
     {
-      "name": "gcc-Release-Bench",
-      "inherits": "build-base",
-      "configurePreset": "gcc-Release-Bench",
-      "description": "Build using gcc-Release-Bench configuration"
-    },
-    {
       "name": "clang-Debug",
       "inherits": "build-base",
       "configurePreset": "clang-Debug",
@@ -227,12 +199,6 @@
       "inherits": "build-base",
       "configurePreset": "clang-Coverage",
       "description": "Build using clang-Coverage configuration"
-    },
-    {
-      "name": "clang-Release-Bench",
-      "inherits": "build-base",
-      "configurePreset": "clang-Release-Bench",
-      "description": "Build using clang-Release-Bench configuration"
     }
   ],
   "testPresets": [
