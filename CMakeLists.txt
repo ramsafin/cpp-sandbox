@@ -18,7 +18,10 @@ include(CompilerFlags)
 include(Helpers)
 
 # === Core Library ===
-add_subdirectory(src)
+# add_subdirectory(src)
+
+# === Exercises ===
+add_subdirectory(exercises)
 
 # === Unit Tests ===
 if(ENABLE_TESTING)
@@ -33,7 +36,7 @@ include(Tooling)
 include(Coverage)
 
 # === Installation & Export ===
-include(install/InstallConfig)
+# include(install/InstallConfig)
 
 # === Packaging ===
-include(CPackConfig)
+# include(CPackConfig)

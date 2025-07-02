@@ -14,7 +14,7 @@
       "cacheVariables": {
         "ENABLE_WARNINGS": "ON",
         "ENABLE_STRICT_WARNINGS": "ON",
-        "ENABLE_TESTING": "ON",
+        "ENABLE_TESTING": "OFF",
         "ENABLE_COVERAGE": "OFF",
         "ENABLE_ASAN": "OFF",
         "ENABLE_UBSAN": "OFF",
