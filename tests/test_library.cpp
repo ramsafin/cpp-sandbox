@@ -2,9 +2,9 @@
 
 #include <stdexcept>
 
-#include "modern_cpp/library.hpp"
+#include "cpp_sandbox/library.hpp"
 
-using namespace modern_cpp;
+using namespace cpp_sandbox;
 
 TEST(AddTests, HandlesAddition) {
   EXPECT_EQ(add(2, 3), 5);

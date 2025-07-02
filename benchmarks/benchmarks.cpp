@@ -1,16 +1,16 @@
 #include <benchmark/benchmark.h>
 
-#include "modern_cpp/library.hpp"
+#include "cpp_sandbox/library.hpp"
 
 static void bmAdd(benchmark::State &state) {
   for (auto _ : state) {  // NOLINT
-    benchmark::DoNotOptimize(modern_cpp::add(1, 2));  // NOLINT (readability-magic-numbers)
+    benchmark::DoNotOptimize(cpp_sandbox::add(1, 2));  // NOLINT (readability-magic-numbers)
   }
 }
 
 static void bmSubtract(benchmark::State &state) {
   for (auto _ : state) {  // NOLINT
-    benchmark::DoNotOptimize(modern_cpp::subtract(5, 3));  // NOLINT (readability-magic-numbers)
+    benchmark::DoNotOptimize(cpp_sandbox::subtract(5, 3));  // NOLINT (readability-magic-numbers)
   }
 }
 

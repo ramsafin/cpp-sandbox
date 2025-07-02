@@ -6,7 +6,7 @@
  * @brief Arithmetic operations library (add, subtract, multiply).
  */
 
-namespace modern_cpp {
+namespace cpp_sandbox {
 
 /**
  * @brief Adds two integers.
@@ -44,6 +44,6 @@ int multiply(int left, int right);
  */
 int divide(int left, int right);
 
-}  // namespace modern_cpp
+}  // namespace cpp_sandbox
 
 #endif

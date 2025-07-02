@@ -2,9 +2,9 @@
 
 > ⚡A clean starter for modern C++20 projects with CMake Presets, testing, benchmarking, sanitizers, coverage, and developer tooling.
 
-[![CI](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/ci.yml)
-[![Clang-Format](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/clang-format.yml/badge.svg)](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/clang-format.yml)
-[![Clang-Tidy](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/clang-tidy.yml/badge.svg)](https://github.com/ramsafin/modern-cpp-project-template/actions/workflows/clang-tidy.yml)
+[![CI](https://github.com/ramsafin/cpp-sandbox/actions/workflows/ci.yml/badge.svg)](https://github.com/ramsafin/cpp-sandbox/actions/workflows/ci.yml)
+[![Clang-Format](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-format.yml/badge.svg)](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-format.yml)
+[![Clang-Tidy](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-tidy.yml/badge.svg)](https://github.com/ramsafin/cpp-sandbox/actions/workflows/clang-tidy.yml)
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 
 ## Table of Contents
@@ -45,7 +45,7 @@
 ## Project Structure
 
 ```text
-modern-cpp-project-template/
+cpp-sandbox/
 ├── app/                 # Optional demo application
 ├── benchmarks/          # Google Benchmark performance tests
 ├── cmake/               # Custom CMake modules (warnings, sanitizers, tooling)
@@ -207,9 +207,9 @@ cmake --install build/gcc-RelWithDebInfo --prefix install  # or /usr/local
 
 After installation, consume the library like this in another CMake project:
 ```bash
-find_package(modern_cpp REQUIRED)
+find_package(cpp_sandbox REQUIRED)
 add_executable(my_app ...)
-target_link_libraries(my_app PRIVATE modern_cpp::library)
+target_link_libraries(my_app PRIVATE cpp_sandbox::library)
 ```
 
 Make sure CMake knows where to find the installed package:
