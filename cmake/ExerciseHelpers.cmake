@@ -31,6 +31,8 @@ function(add_exercise_target)
   # 1) Create the executable target
   add_executable(${CPT_TARGET_NAME} ${CPT_SOURCE_FILES})
 
+  message(STATUS "Created executable: ${CPT_TARGET_NAME}")
+
   # 2) Add include directories if provided
   if(CPT_HEADER_DIRECTORIES)
     target_include_directories(${CPT_TARGET_NAME}
@@ -58,4 +60,6 @@ function(add_exercise_target)
     COMMENT "Running ${CPT_TARGET_NAME}"
     VERBATIM
   )
+
+  message(STATUS "Created run target for executable: run_${CPT_TARGET_NAME}")
 endfunction()

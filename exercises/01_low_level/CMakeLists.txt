@@ -4,11 +4,11 @@ project(ex_01_low_level LANGUAGES CXX)
 message(STATUS "Exercise 01: Low-level C++")
 
 add_exercise_target(
-  TARGET_NAME        ${PROJECT_NAME}
-  SOURCE_FILES       main.cpp square.hpp
-  HEADER_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}
+  TARGET_NAME        ${PROJECT_NAME}_preprocessing
+  SOURCE_FILES       preprocessing/main.cpp
+  HEADER_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/preprocessing
   CXX_STANDARD       23
 )
 
-enable_sanitizers(${PROJECT_NAME})
-enable_strict_warnings(${PROJECT_NAME})
+# enable_sanitizers(${PROJECT_NAME})
+# enable_strict_warnings(${PROJECT_NAME})
