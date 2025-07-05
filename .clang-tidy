@@ -18,7 +18,6 @@ FormatStyle: file
 WarningsAsErrors: '*'
 
 CheckOptions:
-  # Naming conventions (match .clang-format indent/specs)
   - key: readability-identifier-naming.VariableCase
     value: lower_case
   - key: readability-identifier-naming.FunctionCase
