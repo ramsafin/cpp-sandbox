@@ -17,5 +17,12 @@ add_exercise_target(
   CXX_STANDARD       23
 )
 
+add_exercise_target(
+  TARGET_NAME        ${PROJECT_NAME}_asm_to_object
+  SOURCE_FILES       asm_to_object/main.cpp asm_to_object/funcs.cpp
+  HEADER_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}/asm_to_object
+  CXX_STANDARD       23
+)
+
 # enable_sanitizers(${PROJECT_NAME})
 # enable_strict_warnings(${PROJECT_NAME})
